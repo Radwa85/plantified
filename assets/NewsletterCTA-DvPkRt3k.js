@@ -1,4 +1,4 @@
-import{n as e,r as t}from"./index-Cm2ef6Id.js";t();var n=`/plantified/assets/news-planet-CTF12ti1.webp`,r=e(),i=()=>(0,r.jsx)(`section`,{className:`w-full flex justify-center px-4 lg:px-[64px] mb-12 lg:mb-[74px] max-w-7xl mx-auto`,children:(0,r.jsxs)(`div`,{className:`\r
+import{n as e,r as t}from"./index-DsAxPZdp.js";t();var n=`/plantified/assets/news-planet-CTF12ti1.webp`,r=e(),i=()=>(0,r.jsx)(`section`,{className:`w-full flex justify-center px-4 lg:px-[64px] mb-12 lg:mb-[74px] max-w-7xl mx-auto`,children:(0,r.jsxs)(`div`,{className:`\r
           relative \r
           w-full \r
           min-h-[232px]\r
@@ -18,7 +18,7 @@ import{n as e,r as t}from"./index-Cm2ef6Id.js";t();var n=`/plantified/assets/new
                   border border-white/[0.12] \r
                   rounded-[24px] \r
                   px-[24px] \r
-                  text-white/[0.88] \r
+                  text-white/[0.88] text-[16px]\r
                   placeholder:text-white/[0.44] \r
                   outline-none \r
                   transition-all\r
