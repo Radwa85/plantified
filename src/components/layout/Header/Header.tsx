@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import notifIcon from '@/assets/ic_notification (3).svg'
 import heartIcon from '@/assets/ic_heart (2).svg'
 import bagIcon from '@/assets/ic_bag.svg'
@@ -27,7 +28,7 @@ export const Header = () => {
   }, [])
 
   return (
-    <header
+    <motion.header
       role="banner"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 animate-slide-down ${
         scrolled ? 'bg-plant-bg/95 backdrop-blur-md' : 'bg-plant-bg'
