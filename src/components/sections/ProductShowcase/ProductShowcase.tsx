@@ -31,7 +31,7 @@ export const ProductShowcase = () => {
     >
       <div className=" mx-auto max-w-7xl px-4 md:px-16 lg:px-[64px]">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[480px]">
-                    <div className="relative z-0 lg:z-0 flex justify-center items-center h-[562px] w-[480px] overflow-hidden">
+          <div className="relative z-0 flex justify-center items-center w-full lg:w-[480px] h-[320px] lg:h-[562px] overflow-hidden">
             {plantsData.map((plant, index) => (
               <motion.img
                 key={plant.id}
@@ -49,7 +49,7 @@ export const ProductShowcase = () => {
             ))}
           </div>
 
-          <div className="relative z-10 lg:z-10 max-w-[620px] flex flex-col justify-center bg-[#EFF7EF] pl-20 overflow-hidden lg:overflow-visible">
+          <div className="relative z-10 w-full flex flex-col justify-center bg-[#EFF7EF] lg:pl-20 pt-4 lg:pt-0 overflow-hidden lg:overflow-visible">
             
             <img
               src={leafIcon}
@@ -101,7 +101,7 @@ export const ProductShowcase = () => {
                 </div>
               </div>
 
-              <div className="flex gap-11 mb-10">
+              <div className="flex flex-wrap gap-6 lg:gap-11 mb-10">
                 {specTypes.map((spec) => (
                   <div key={spec.label} className="flex gap-3">
                     <img src={spec.icon} className="w-5 h-5 mt-3" alt="" />

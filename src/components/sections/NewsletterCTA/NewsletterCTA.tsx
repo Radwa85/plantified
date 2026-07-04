@@ -12,7 +12,7 @@ export const NewsletterCTA = () => {
         className="
           relative 
           w-full 
-          h-[232px]
+          min-h-[232px]
           bg-[#363D37] 
           rounded-[24px] 
           flex 
@@ -20,7 +20,7 @@ export const NewsletterCTA = () => {
           items-center 
           justify-center 
           py-[32px] 
-          px-[24px] 
+          px-[20px] md:px-[32px]
           overflow-hidden
         "
       >
@@ -34,17 +34,17 @@ export const NewsletterCTA = () => {
         <div className="relative z-10 flex flex-col items-center gap-[24px] w-full max-w-[850px] text-center">
     
           <div className="flex flex-col gap-[12px]">
-            <h2 className="text-white/[0.88] font-medium text-[20px] ">
+            <h2 className="text-white/[0.88] font-medium text-[16px] md:text-[20px]">
               Find the plant that grows with you.
             </h2>
-            <p className="text-white/[0.66] text-[18px] font-regular  ">
+            <p className="text-white/[0.66] text-[14px] md:text-[18px] font-regular">
               Join 50,000+ urban dwellers who have rediscovered the joy of quiet growth. Delivered with care, straight to your door.
             </p>
           </div>
 
           <form 
             onSubmit={handleSubmit}
-            className="flex items-center gap-[8px] w-full max-w-[425px]"
+            className="flex flex-wrap items-center gap-[8px] w-full max-w-[425px]"
           >
             <input
               type="email"

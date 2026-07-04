@@ -130,20 +130,18 @@ export const Hero = () => {
           </motion.div>
 
         </div>
-        <div className="w-full lg:w-1/2 relative flex justify-end items-center mt-16 lg:mt-0 overflow-visible">
-          <motion.div
+        <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end items-center mt-8 lg:mt-0">
+          <div
             className="
               absolute
-              w-[120vw] lg:w-[900px]
-              h-[120vw] lg:h-[900px]
-              aspect-square
+              w-[85vw] h-[85vw]
+              lg:w-[900px] lg:h-[900px]
               rounded-full
               bg-[#EAF2E6]
               -z-10
-              right-[-200px]
               lg:right-[-430px]
-              -translate-y-[90px]
-              translate-x-[160px]
+              lg:-translate-y-[90px]
+              lg:translate-x-[160px]
             "
           />
           <motion.img
@@ -160,12 +158,12 @@ export const Hero = () => {
             className="
               relative
               z-10
-              w-full max-w-[500px]
-              lg:w-[700px]
+              w-[80vw] max-w-[380px]
+              lg:w-[700px] lg:max-w-none
               h-auto
               aspect-[700/709]
               object-contain
-              object-right
+              lg:object-right
               lg:-mr-[190px]
             "
           />
