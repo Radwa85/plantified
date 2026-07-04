@@ -23,6 +23,7 @@ export const Footer = () => {
             {SOCIAL_LINKS.map(({ label, icon }) => (
               <li key={label}>
                 <a
+                  href="#"
                   aria-label={label}
                   className="text-white/80 hover:text-white/80 transition-colors w-8 h-8 flex items-center justify-center"
                 >

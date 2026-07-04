@@ -46,13 +46,11 @@ export const CareSteps = () => {
   const ARROWS = [arrowStep1, arrowStep2, arrowStep3];
 
   return (
-    <section className="relative w-full px-4 lg:px-[64px] py-16 lg:py-[200px]">
+    <section className="relative w-full px-4 lg:px-[64px] py-16 lg:py-[200px] max-w-7xl mx-auto">
             <div 
         className="
           relative 
           w-full 
-          max-w-7xl
-          mx-auto
           flex 
           flex-col 
           items-center 
