@@ -1,4 +1,4 @@
-import{n as e,t}from"./index-DSHuIC_W.js";var n=`/plantified/assets/plant-pot-kg0MuRBF.webp`,r=`/plantified/assets/vines-left-DDDqa4IA.webp`,i=e(),a=()=>(0,i.jsxs)(`div`,{className:`\r
+import{n as e,t}from"./index-C2oXWhB9.js";var n=`/plantified/assets/plant-pot-kg0MuRBF.webp`,r=`/plantified/assets/vines-left-DDDqa4IA.webp`,i=e(),a=()=>(0,i.jsxs)(`div`,{className:`\r
         absolute \r
         right-[32px] \r
         top-[-10px] \r
