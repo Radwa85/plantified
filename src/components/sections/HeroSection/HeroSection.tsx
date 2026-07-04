@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
-import planetHand from '@/assets/planet-hand.webp';
-import planetHandMobile from '@/assets/Planet-Hand-mobile.webp';
-import arrowRight from '@/assets/arrow-right.svg';
+const planetHand = `${import.meta.env.BASE_URL}Planet-Hand.webp`
+const planetHandMobile = `${import.meta.env.BASE_URL}Planet-Hand-mobile.webp`;
 import heroLeaf from '@/assets/hero-leaves.webp';
 import heroLeafMobile from '@/assets/hero-leaves-mobile.webp';
+import arrowRight from '@/assets/arrow-right.svg';
 
 export const Hero = () => {
   return (

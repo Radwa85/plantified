@@ -1,12 +1,14 @@
+import { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
-import { ProductShowcase } from './components/sections/ProductShowcase/ProductShowcase';
 import { Header } from './components/layout/Header/Header';
-import { Footer } from './components/layout/Footer/Footer';
-import { ProductCategories } from './components/sections/ProductCategories/ProductCategories';
-import { CareSteps } from './components/sections/CareSteps/CareSteps';
-import { CareRightTime } from './components/sections/CareRightTime/CareRightTime'; 
-import { NewsletterCTA } from './components/sections/NewsletterCTA/NewsletterCTA';
 import { Hero } from './components/sections/HeroSection/HeroSection';
+
+const ProductShowcase = lazy(() => import('./components/sections/ProductShowcase/ProductShowcase').then(module => ({ default: module.ProductShowcase })));
+const ProductCategories = lazy(() => import('./components/sections/ProductCategories/ProductCategories').then(module => ({ default: module.ProductCategories })));
+const CareSteps = lazy(() => import('./components/sections/CareSteps/CareSteps').then(module => ({ default: module.CareSteps })));
+const CareRightTime = lazy(() => import('./components/sections/CareRightTime/CareRightTime').then(module => ({ default: module.CareRightTime })));
+const NewsletterCTA = lazy(() => import('./components/sections/NewsletterCTA/NewsletterCTA').then(module => ({ default: module.NewsletterCTA })));
+const Footer = lazy(() => import('./components/layout/Footer/Footer').then(module => ({ default: module.Footer })));
 
 const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -33,26 +35,30 @@ function App() {
       <main>
         <Hero />
         
-        <RevealOnScroll>
-          <ProductShowcase />
-        </RevealOnScroll>
+        <Suspense fallback={<div className="h-20" />}>
+          <RevealOnScroll>
+            <ProductShowcase />
+          </RevealOnScroll>
+          
+          <RevealOnScroll>
+            <ProductCategories />
+          </RevealOnScroll>
         
-        <RevealOnScroll>
-          <ProductCategories />
-        </RevealOnScroll>
-      
-        <RevealOnScroll>
-          <CareSteps />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <CareRightTime />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <NewsletterCTA />
-        </RevealOnScroll>
+          <RevealOnScroll>
+            <CareSteps />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <CareRightTime />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <NewsletterCTA />
+          </RevealOnScroll>
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={<div className="h-20" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
