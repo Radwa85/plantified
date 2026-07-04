@@ -141,7 +141,7 @@ export const Hero = () => {
               bg-[#EAF2E6]
               -z-10
               right-[-200px]
-              lg:right-[-280px]
+              lg:right-[-430px]
               -translate-y-[90px]
               translate-x-[160px]
             "
@@ -154,14 +154,16 @@ export const Hero = () => {
             srcSet={`${planetHandMobile} 300w, ${planetHand} 700w`}
             sizes="(max-width: 768px) 300px, 700px"
             alt="Monstera Plant in hand"
-      
+            width={700}
+            height={709}
             fetchPriority="high"
             className="
               relative
               z-10
               w-full max-w-[500px]
               lg:w-[700px]
-              h-auto lg:h-[709px]
+              h-auto
+              aspect-[700/709]
               object-contain
               object-right
               lg:-mr-[190px]

@@ -37,7 +37,9 @@ export const ProductShowcase = () => {
                 key={plant.id}
                 src={plant.image}
                 alt={plant.name}
-                className="absolute w-[450px] lg:w-[480px] object-contain"
+                width={480}
+                height={562}
+                className="absolute w-[450px] lg:w-[480px] h-auto object-contain"
                 animate={{ 
                   x: `${(index - activeIndex) * 100}%`,
                   scale: activeIndex === index ? 1 : 0.8,
