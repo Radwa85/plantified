@@ -44,7 +44,7 @@ export const NewsletterCTA = () => {
 
           <form 
             onSubmit={handleSubmit}
-            className="flex flex-wrap items-center gap-[8px] w-full max-w-[425px]"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-[8px] w-full max-w-[425px]"
           >
             <input
               type="email"
@@ -61,6 +61,7 @@ export const NewsletterCTA = () => {
                 placeholder:text-white/[0.44] 
                 outline-none 
                 transition-all
+                min-w-0
               "
             />
             <button
@@ -73,7 +74,8 @@ export const NewsletterCTA = () => {
                 font-medium 
                 text-[16px] 
                 rounded-[24px] 
-                transition-colors 
+                transition-colors
+                whitespace-nowrap
               "
             >
               Send

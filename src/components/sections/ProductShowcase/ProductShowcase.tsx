@@ -27,7 +27,7 @@ export const ProductShowcase = () => {
 
   return (
     <section
-      className="relative bg-[#EFF7EF] pt-[92px] pb-[100px] overflow-hidden md:overflow-visible"
+      className="relative bg-[#EFF7EF] pt-[92px] pb-[120px] md:pb-[130px] overflow-hidden md:overflow-visible"
     >
       <div className=" mx-auto max-w-7xl px-4 md:px-16 lg:px-[64px]">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[480px]">
@@ -166,32 +166,35 @@ export const ProductShowcase = () => {
           </div>
         </div>
       </div>
-      <div className="absolute left-0 right-0 -bottom-[44px] flex justify-center gap-4 z-30">
-        {plantsData.map((plant, index) => {
-          const isActive = activeIndex === index;
+      {/* Thumbnail strip - scrollable on mobile, centered on desktop */}
+      <div className="absolute left-0 right-0 -bottom-[44px] z-30">
+        <div className="flex justify-start md:justify-center gap-3 md:gap-4 px-4 md:px-0 overflow-x-auto scrollbar-hide">
+          {plantsData.map((plant, index) => {
+            const isActive = activeIndex === index;
 
-          return (
-            <motion.button
-              key={plant.id}
-              onClick={() => handlePlantChange(index)}
-              animate={{
-                scale: isActive ? 1 : 0.95,
-                borderColor: isActive ? '#346E3C' : 'transparent',
-                boxShadow: isActive
-                  ? '0px 4px 16px rgba(52,110,60,0.12)'
-                  : 'none',
-              }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-              className="w-[88px] h-[88px] rounded-xl flex items-center justify-center bg-[#FCF7F2] border-[1.5px]"
-            >
-              <img
-                src={plant.thumb}
-                alt={plant.name}
-                className="w-[58px] h-[58px] object-contain"
-              />
-            </motion.button>
-          );
-        })}
+            return (
+              <motion.button
+                key={plant.id}
+                onClick={() => handlePlantChange(index)}
+                animate={{
+                  scale: isActive ? 1 : 0.95,
+                  borderColor: isActive ? '#346E3C' : 'transparent',
+                  boxShadow: isActive
+                    ? '0px 4px 16px rgba(52,110,60,0.12)'
+                    : 'none',
+                }}
+                transition={{ duration: 0.6, ease: 'easeInOut' }}
+                className="w-[72px] h-[72px] md:w-[88px] md:h-[88px] rounded-xl flex-shrink-0 flex items-center justify-center bg-[#FCF7F2] border-[1.5px]"
+              >
+                <img
+                  src={plant.thumb}
+                  alt={plant.name}
+                  className="w-[46px] h-[46px] md:w-[58px] md:h-[58px] object-contain"
+                />
+              </motion.button>
+            );
+          })}
+        </div>
       </div>
     </section>
   )
