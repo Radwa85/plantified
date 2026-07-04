@@ -1,4 +1,4 @@
-import{n as e,r as t}from"./index-C13PAOhM.js";t();var n=`/plantified/assets/news-planet-CTF12ti1.webp`,r=e(),i=()=>(0,r.jsx)(`section`,{className:`w-full flex justify-center px-4 lg:px-[64px] mb-12 lg:mb-[74px] max-w-7xl mx-auto`,children:(0,r.jsxs)(`div`,{className:`\r
+import{n as e,r as t}from"./index-DSPsiREK.js";t();var n=`/plantified/assets/news-planet-CTF12ti1.webp`,r=e(),i=()=>(0,r.jsx)(`section`,{className:`w-full flex justify-center px-4 lg:px-[64px] mb-12 lg:mb-[74px] max-w-7xl mx-auto`,children:(0,r.jsxs)(`div`,{className:`\r
           relative \r
           w-full \r
           min-h-[232px]\r
