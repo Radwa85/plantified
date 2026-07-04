@@ -46,26 +46,27 @@ export const NewsletterCTA = () => {
             onSubmit={handleSubmit}
             className="w-full max-w-[425px]"
           >
-            <div className="flex flex-col sm:flex-row gap-[8px]">
-              <input
-                type="email"
-                placeholder="Enter your email here"
-                required
-                className="
-                  flex-1 
-                  h-[48px] 
-                  bg-white/[0.12] 
-                  border border-white/[0.12] 
-                  rounded-[24px] 
-                  px-[24px] 
-                  text-white/[0.88] text-[16px]
-                  placeholder:text-white/[0.44] 
-                  outline-none 
-                  transition-all
-                  min-w-0
-                  w-full
-                "
-              />
+<div className="flex flex-col sm:flex-row sm:items-center gap-[8px] w-full">
+      <input
+  type="email"
+  placeholder="Enter your email here"
+  required
+  className="
+    flex-1
+    min-w-0
+    w-full
+    sm:min-w-[0]
+    h-[48px]
+    bg-white/[0.12]
+    border border-white/[0.12]
+    rounded-[24px]
+    px-[24px]
+    text-white/[0.88] text-[16px]
+    placeholder:text-white/[0.44]
+    outline-none
+    transition-all
+  "
+/>
               <button
                 type="submit"
                 className="
