@@ -1,5 +1,4 @@
-import { Suspense, lazy } from 'react';
-import { motion } from 'framer-motion';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Header } from './components/layout/Header/Header';
 import { Hero } from './components/sections/HeroSection/HeroSection';
 
@@ -11,19 +10,37 @@ const NewsletterCTA = lazy(() => import('./components/sections/NewsletterCTA/New
 const Footer = lazy(() => import('./components/layout/Footer/Footer').then(module => ({ default: module.Footer })));
 
 const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.08, rootMargin: '-40px 0px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 }
+    <div
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(32px)',
+        transition: 'opacity 0.7s ease-out, transform 0.7s ease-out',
+        willChange: 'opacity, transform',
       }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
