@@ -58,7 +58,7 @@ export const NewsletterCTA = () => {
                   border border-white/[0.12] 
                   rounded-[24px] 
                   px-[24px] 
-                  text-white/[0.88] 
+                  text-white/[0.88] text-[16px]
                   placeholder:text-white/[0.44] 
                   outline-none 
                   transition-all
