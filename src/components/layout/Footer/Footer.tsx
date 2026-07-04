@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer
       className="bg-plant-footer border-t border-white/5 px-4 lg:px-[64px] py-4"
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-white/[0.8] text-[14px] font-medium">
           © {new Date().getFullYear()} Plantified, Grown with care.
         </p>

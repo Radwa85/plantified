@@ -37,18 +37,17 @@ export const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 lg:px-[64px] py-4 flex items-center border-b border-[#819E26]/20">
-        
+      <div className="w-full px-4 md:px-16 flex items-stretch border-b border-[#819E26]/20">        
       <a 
         href="#home" 
-        className="flex items-center gap-2 font-bold text-xl text-plant-forest font-ubuntu shrink-0"
+        className="flex items-center gap-2 font-bold text-xl text-plant-forest font-ubuntu shrink-0 py-4"
       >
         Plantified
       </a>
 
- <ul className="hidden md:flex items-center gap-10 ml-[58px]" role="list">
+      <ul className="hidden md:flex items-stretch gap-10 ml-[58px]" role="list">
         {NAV_ITEMS.map(({ label, href, isActive }) => (
-          <li key={label} className="relative">
+          <li key={label} className="relative flex items-center">
             <a
               href={href}
               className={`text-sm font-medium transition-colors ${
@@ -58,13 +57,13 @@ export const Header = () => {
               {label}
             </a>
             {isActive && (
-              <span className="absolute -bottom-[20px] left-0 right-0 h-1 bg-plant-forest rounded-t-[4px]" />
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-plant-forest rounded-t-[4px]" />
             )}
           </li>
         ))}
       </ul>
 
-      <div className="flex items-center gap-4 ml-auto">
+      <div className="flex items-center gap-4 ml-auto py-4">
         {ACTION_ICONS.map(({ icon, label }) => (
           <button key={label} aria-label={label} title={label} className="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity">
             <img src={icon} alt="" aria-hidden="true" />
