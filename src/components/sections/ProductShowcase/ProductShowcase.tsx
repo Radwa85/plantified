@@ -102,7 +102,7 @@ pb-[120px] md:pb-[130px] overflow-visible"
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4 md:gap-6 lg:gap-11 mb-10">
+              <div className="flex flex-nowrap gap-4 md:gap-6 lg:gap-11 mb-10">
                 {specTypes.map((spec) => (
                   <div key={spec.label} className="flex gap-3">
                     <img src={spec.icon} className="w-5 h-5 mt-3" alt="" />
