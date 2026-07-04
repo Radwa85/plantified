@@ -102,7 +102,7 @@ pb-[120px] md:pb-[130px] overflow-visible"
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-6 lg:gap-11 mb-10">
+              <div className="flex flex-wrap gap-4 md:gap-6 lg:gap-11 mb-10">
                 {specTypes.map((spec) => (
                   <div key={spec.label} className="flex gap-3">
                     <img src={spec.icon} className="w-5 h-5 mt-3" alt="" />
@@ -110,7 +110,7 @@ pb-[120px] md:pb-[130px] overflow-visible"
                       <p className="text-[#B0B0B0] text-[13px] mb-1">
                         {spec.label}
                       </p>
-                      <div className="relative h-[28px] w-[110px] overflow-hidden">
+                      <div className="relative h-[28px] w-[90px] md:w-[110px] overflow-hidden">
                         {plantsData.map((plant, index) => (
                           <motion.p
                             key={plant.id}
