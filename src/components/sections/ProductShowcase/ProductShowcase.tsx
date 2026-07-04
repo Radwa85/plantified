@@ -27,7 +27,8 @@ export const ProductShowcase = () => {
 
   return (
     <section
-      className="relative bg-[#EFF7EF] pt-[92px] pb-[120px] md:pb-[130px] overflow-hidden md:overflow-visible"
+      className="relative bg-[#EFF7EF] pt-[92px] 
+pb-[120px] md:pb-[130px] overflow-visible"
     >
       <div className=" mx-auto max-w-7xl px-4 md:px-16 lg:px-[64px]">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[480px]">
