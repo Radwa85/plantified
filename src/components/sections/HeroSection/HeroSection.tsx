@@ -139,7 +139,7 @@ export const Hero = () => {
               rounded-full
               bg-[#EAF2E6]
               -z-10
-              lg:right-[-430px]
+              lg:right-[-280px]
               lg:-translate-y-[90px]
               lg:translate-x-[160px]
             "
